@@ -13,7 +13,6 @@
   --contact-detail-footer:rgba(255, 255, 255, 0.6);
   --footer-bg-color: #2F303A;
   --regular-custm-bg-color: #AFB1B8;
- --transparent-gray-color: #2F303ACC;
  --transparent-blue-color:#2196F3E5;
   --modal-bg:rgba(0, 0, 0, 0.2);
   --time-ms:250ms;
@@ -492,7 +491,7 @@ margin-right: 0;
   justify-content: center;
   border-radius: 4px;
   color: var(--regular-custm-bg-color);
-  transition: color var(--time) var(--time-function), border var(--time) var(--time-function);
+  transition: color var(--time-ms) var(--time-function), border var(--time-ms) var(--time-function);
 
 }
 
@@ -676,6 +675,17 @@ color: var(--webstudio-link-color);
 
 .portfolio-projects-title{
   display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  
 }
 
 .projects-section{
@@ -704,7 +714,7 @@ margin-bottom: 0px;
   color: var(--contact-detail-header);
 }
 
-.grey-border-box{
+.gray-border-box{
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
@@ -724,7 +734,7 @@ margin-bottom: 0px;
 
 .projects > li{
   margin-bottom: 30px;
- transition: color var(--time) var(--time-function ), background-color var(--time) var(--time-function);
+ transition: color var(--time-ms) var(--time-function ), background-color var(--time-ms) var(--time-function);
 }
 .projects > li:nth-child(n+7){
   margin-bottom: 0px;
@@ -732,7 +742,8 @@ margin-bottom: 0px;
 
 .overflow-block{
   position: relative;
-  overflow: hidden;
+  overflow:visible;
+
 }
 
 .overlay{
@@ -755,7 +766,6 @@ margin-bottom: 0px;
   text-align: left;
   padding: 63px 24px;
 }
-
 
 
 .nav-link-current{
